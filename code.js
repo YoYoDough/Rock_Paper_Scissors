@@ -4,8 +4,10 @@ function computerPlay()
     var item = items[Math.floor(Math.random() * items.length)];
     return item;
 }
-function playRound(playerSelection, computerSelection)
+function playRound(playerSelectionn, computerSelectionn)
 {
+    var playerSelection = playerSelectionn.toLowerCase();
+    var computerSelection = computerSelectionn.toLowerCase();
     if (computerSelection == playerSelection)
     {
         var draw = "Draw";
@@ -48,10 +50,16 @@ function playRound(playerSelection, computerSelection)
         return loser;
     }
 }
+function game(playerSelectionn, computerSelectionn)
+{
+    console.log(playRound(playerSelectionn, computerSelectionn))
+}
 var playerSelectionCount = 0;
 var computerSelectionCount = 0;
-var playerSelectionn = prompt("Please enter Rock, Paper or Scissors.");
-var computerSelectionn = computerPlay();
-var playerSelection = playerSelectionn.toLowerCase();
-var computerSelection = computerSelectionn.toLowerCase();
+for(i = 0; i < 5; i++)
+{
+    var playerSelectionn = prompt("Please enter Rock, Paper or Scissors.");
+    var computerSelectionn = computerPlay();
+    console.log(game(playerSelectionn, computerSelectionn))
+}
 console.log(playerSelectionCount + " To " + computerSelectionCount);
