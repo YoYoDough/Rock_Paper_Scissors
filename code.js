@@ -50,8 +50,8 @@ function playRound(playerSelection, computerSelection)
 }
 var playerSelectionCount = 0;
 var computerSelectionCount = 0;
-var playerSelectionn = "PAper";
+var playerSelectionn = prompt("Please enter Rock, Paper or Scissors.");
 var computerSelectionn = computerPlay();
 var playerSelection = playerSelectionn.toLowerCase();
 var computerSelection = computerSelectionn.toLowerCase();
-console.log(playRound(playerSelection, computerSelection));
+console.log(playerSelectionCount + " To " + computerSelectionCount);
